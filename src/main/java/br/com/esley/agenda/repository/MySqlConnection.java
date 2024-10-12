@@ -14,8 +14,8 @@ public class MySqlConnection {
     }
 
     public static void main(String[] args) {
-        try (Connection con = createConnectionToMySQL()) {
-            if (con != null) {
+        try (Connection conn = createConnectionToMySQL()) {
+            if (conn != null) {
                 System.out.println("Connection success!");
             } else {
                 System.out.println("Connection error!");

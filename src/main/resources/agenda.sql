@@ -7,3 +7,5 @@ create table contacts
 );
 
 select * from agenda.contacts;
+
+drop table contacts;
