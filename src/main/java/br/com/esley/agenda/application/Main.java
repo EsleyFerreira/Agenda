@@ -7,12 +7,18 @@ import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
+
+        ContactDAO contactDAO = new ContactDAO();
         Contacts contacts = new Contacts();
-        contacts.setName("Camila Silva");
+
+        contacts.setName("Eduardo Silva");
         contacts.setAge(55);
         contacts.setDataRegister(new Date());
 
-        ContactDAO contactDAO = new ContactDAO();
         contactDAO.save(contacts);
+
+        for(Contacts c : contactDAO.getContacts()){
+            System.out.println("Contato: " + c.getName());
+        }
     }
 }
